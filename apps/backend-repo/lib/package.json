@@ -1,0 +1,39 @@
+{
+  "name": "functions",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc && cp package.json .env lib/",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && cp .env lib/ && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.3.0",
+    "firebase-admin": "^13.1.0",
+    "firebase-functions": "^6.3.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "firebase-functions-test": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "private": true
+}
