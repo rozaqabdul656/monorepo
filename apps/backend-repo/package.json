@@ -2,7 +2,7 @@
   "name": "functions",
   "type": "module",
   "scripts": {
-    "build": "tsc && cp  .env lib/ && firebase emulators:start --only functions",
+    "build": "tsc && cp  .env lib/",
     "build:watch": "tsc --watch",
     "serve": "npm run build && cp .env lib/ && firebase emulators:start --only functions",
     "dev": "tsc && cp  .env lib/ && firebase emulators:start --only functions",
